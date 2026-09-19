@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Mark Hamazaspyan is a researcher and machine learning team lead working on Physical AI, world models, JEPA architectures, and robot task failure detection." />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>Mark Hamazaspyan · Researcher & Machine Learning Team Lead</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2317283d'/%3E%3Cpath d='M13 45V19h6l13 17 13-17h6v26h-6V28L32 44 19 28v17z' fill='%23f3f5f2'/%3E%3C/svg%3E" />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17283d;
+        --body: #344459;
+        --muted: #637185;
+        --link: #175e91;
+        --line: #dbe3e9;
+        --paper: #fff;
+        --canvas: #f7f9fa;
+        --accent: #a4c5d8;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--canvas);
+        color: var(--body);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a { color: var(--link); text-decoration-color: #9bbcd1; text-underline-offset: .16em; }
+      a:hover { color: var(--ink); text-decoration-color: currentColor; }
+      a:focus-visible { outline: 3px solid #75add0; outline-offset: 3px; border-radius: 2px; }
+
+      .page {
+        max-width: 870px;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: clamp(2rem, 7vw, 5rem) clamp(1.4rem, 6vw, 4rem) 3rem;
+        background: var(--paper);
+        box-shadow: 0 0 0 1px #edf1f3;
+      }
+
+      .masthead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid var(--line);
+        color: var(--muted);
+        font-size: .88rem;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+      }
+      .wordmark { color: var(--ink); font-weight: 700; letter-spacing: .14em; }
+      .location { white-space: nowrap; }
+
+      header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 180px;
+        align-items: start;
+        gap: clamp(2rem, 6vw, 4.5rem);
+        margin: clamp(2.4rem, 6vw, 4rem) 0 3.2rem;
+      }
+      .header-copy { min-width: 0; }
+      .portrait {
+        display: block;
+        width: 180px;
+        height: 225px;
+        aspect-ratio: 4 / 5;
+        margin: .35rem 0 0;
+        object-fit: cover;
+        object-position: 50% 39%;
+        border-radius: 3px;
+        box-shadow: 0 0 0 1px rgba(23, 40, 61, .12);
+      }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 {
+        max-width: 660px;
+        margin-bottom: .4rem;
+        color: var(--ink);
+        font-size: clamp(2.45rem, 6vw, 4.15rem);
+        font-weight: 650;
+        letter-spacing: -.055em;
+        line-height: 1.08;
+      }
+      .role {
+        margin-bottom: 1.6rem;
+        color: var(--muted);
+        font-size: clamp(1.05rem, 2.1vw, 1.25rem);
+        letter-spacing: -.01em;
+      }
+      .intro { max-width: 630px; font-size: 1.08rem; line-height: 1.73; }
+      .intro p { margin-bottom: .85rem; }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem 1.45rem;
+        margin-top: 1.55rem;
+        font-size: .97rem;
+      }
+      .links a { font-weight: 600; }
+
+      section { margin-top: 3.5rem; }
+      h2 {
+        margin-bottom: 1.45rem;
+        padding-bottom: .55rem;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+        font-size: 1.5rem;
+        font-weight: 650;
+        letter-spacing: -.025em;
+        line-height: 1.3;
+      }
+      h3 {
+        margin-bottom: .25rem;
+        color: var(--ink);
+        font-size: 1.075rem;
+        font-weight: 650;
+        line-height: 1.4;
+      }
+      section > p { max-width: 690px; }
+      .focus-list, .work-list, .background-list { list-style: none; margin: 0; padding: 0; }
+      .focus-list li {
+        padding: .1rem 0 .1rem 1.15rem;
+        border-left: 2px solid var(--accent);
+        margin-bottom: 1.3rem;
+      }
+      .focus-list p, .work-list p, .background-list p { margin-bottom: 0; }
+      .work-list li { padding: 0 0 1.55rem; }
+      .work-list li + li { padding-top: 1.5rem; border-top: 1px solid var(--line); }
+      .work-list li:last-child { padding-bottom: 0; }
+      .meta {
+        margin-bottom: .4rem;
+        color: var(--muted);
+        font-size: .87rem;
+        letter-spacing: .025em;
+      }
+      .work-list p { max-width: 680px; }
+      .item-links { margin-top: .45rem; font-size: .94rem; }
+      .background-list li { margin-bottom: 1rem; }
+      .background-list li:last-child { margin-bottom: 0; }
+      .background-list strong { color: var(--ink); font-weight: 600; }
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 4.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: .86rem;
+      }
+
+      @media (max-width: 600px) {
+        body { background: var(--paper); }
+        .page { padding: 1.35rem 1.25rem 2rem; box-shadow: none; }
+        .masthead { font-size: .76rem; }
+        header { grid-template-columns: 1fr; gap: 1.75rem; margin: 2.5rem 0 2.7rem; }
+        .portrait { grid-row: 1; width: 116px; height: 145px; margin-top: 0; }
+        h1 { letter-spacing: -.05em; }
+        .intro { font-size: 1rem; }
+        section { margin-top: 2.9rem; }
+        footer { flex-direction: column; gap: .2rem; margin-top: 3.5rem; }
+      }
+
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="masthead" aria-label="Site header">
+        <span class="wordmark">MH</span>
+        <span class="location">Yerevan, Armenia</span>
+      </div>
+
+      <header>
+        <div class="header-copy">
+          <h1>Mark Hamazaspyan</h1>
+          <p class="role">Researcher &amp; Machine Learning Team Lead</p>
+          <div class="intro">
+            <p>I work on Physical AI: building models that understand how the world changes, recognize when robotic tasks go wrong, and support reliable real-world interaction.</p>
+            <p>At <strong>Metric</strong>, my current research focuses on world models, JEPA architectures, self-supervised video learning, and failure detection for robotic tasks. I also teach data management and data analytics and visualization in Yerevan.</p>
+          </div>
+          <div class="links" aria-label="Profiles and selected links">
+            <a href="https://www.linkedin.com/in/mark-hamazaspyan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://x.com/MHamazaspyan" target="_blank" rel="noopener noreferrer">X</a>
+            <a href="https://huggingface.co/collections/Metric-AI/document-rag" target="_blank" rel="noopener noreferrer">Hugging Face</a>
+            <a href="https://openaccess.thecvf.com/content/CVPR2023W/GCV/html/Hamazaspyan_Diffusion-Enhanced_PatchMatch_A_Framework_for_Arbitrary_Style_Transfer_With_Diffusion_CVPRW_2023_paper.html" target="_blank" rel="noopener noreferrer">CVPR workshop paper</a>
+          </div>
+        </div>
+        <img class="portrait" src="mark-hamazaspyan.png" alt="Portrait of Mark Hamazaspyan" width="1108" height="1419" />
+      </header>
+
+      <section aria-labelledby="focus-title">
+        <h2 id="focus-title">Research</h2>
+        <ul class="focus-list">
+          <li>
+            <h3>Robot task failure detection</h3>
+            <p>I work on detecting when robotic policies fail, understanding why they fail, and recognizing problems early enough for recovery or intervention. This includes evaluation across varied tasks, environments, and failure modes.</p>
+          </li>
+          <li>
+            <h3>World models &amp; JEPA architectures</h3>
+            <p>I study predictive representations of video and action: models that learn how scenes evolve, capture task-relevant dynamics, and provide useful state representations for embodied agents.</p>
+          </li>
+          <li>
+            <h3>Vision-language-action learning</h3>
+            <p>I investigate multimodal models for robotic manipulation, including temporal reasoning, action representation, robot adaptation, imitation learning, and offline evaluation.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="work-title">
+        <h2 id="work-title">Current &amp; selected work</h2>
+        <ul class="work-list">
+          <li>
+            <h3>Failure detection for robotic tasks</h3>
+            <p class="meta">Metric · Current research</p>
+            <p>Developing methods and evaluation pipelines for recognizing unsuccessful robot behavior from video and learned representations, with a focus on robust detection across tasks and failure types.</p>
+          </li>
+          <li>
+            <h3>Predictive video representations</h3>
+            <p class="meta">Metric · Physical AI research</p>
+            <p>Research on self-supervised video learning, temporal prediction, and JEPA-style architectures as foundations for world models and more reliable embodied systems.</p>
+          </li>
+          <li>
+            <h3>Diffusion-Enhanced PatchMatch</h3>
+            <p class="meta">CVPR Workshops · 2023 · With Shant Navasardyan</p>
+            <p>A method for arbitrary style transfer that combines diffusion models with PatchMatch, without fine-tuning or pretraining for each style.</p>
+            <p class="item-links"><a href="https://openaccess.thecvf.com/content/CVPR2023W/GCV/html/Hamazaspyan_Diffusion-Enhanced_PatchMatch_A_Framework_for_Arbitrary_Style_Transfer_With_Diffusion_CVPRW_2023_paper.html" target="_blank" rel="noopener noreferrer">Read the paper</a></p>
+          </li>
+          <li>
+            <h3>Multilingual visual document retrieval</h3>
+            <p class="meta">Metric · Earlier research</p>
+            <p>Developed vision-language retrievers for visually rich documents, with an emphasis on multilingual retrieval quality and efficient inference.</p>
+            <p class="item-links"><a href="https://huggingface.co/collections/Metric-AI/document-rag" target="_blank" rel="noopener noreferrer">Explore the model collection</a></p>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="background-title">
+        <h2 id="background-title">Teaching &amp; background</h2>
+        <p>I teach data management at the American University of Armenia and Data Analytics and Visualization at Yerevan State University. Earlier, I co-founded Breedge, an education technology startup, and worked on AutoML and NLP systems.</p>
+        <ul class="background-list">
+          <li><strong>Yerevan State University</strong> · MS in Applied Statistics and Data Science, 2023</li>
+          <li><strong>American University of Armenia</strong> · BA in Business: Economics, 2019</li>
+        </ul>
+      </section>
+
+      <footer>
+        <span>Mark Hamazaspyan</span>
+        <span>Last updated September 2026</span>
+      </footer>
+    </main>
+  </body>
+</html>
